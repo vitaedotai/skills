@@ -1,14 +1,13 @@
-# Authoring a recruiting skill
+# Authoring recruiter skills
 
-Every skill should specify:
+Each top-level skill directory contains a portable `SKILL.md` with YAML frontmatter: `name`, a discriminating `description`, `license`, and string-valued `metadata.version`. The directory and name must match. Keep additional resources inside that directory so individual installation remains self-contained.
 
-1. When to use it and what information is required.
-2. The procedure and how to handle missing information.
-3. Expected output and a fictional example.
-4. Quality checks for factual accuracy, relevance, tone, and completeness.
-5. Optional Vitae actions mapped to verified tools.
-6. Completion criteria, approval requirements, and the next handoff.
+Write a real procedure that changes the assistant's decisions. Specify required inputs, evidence handling, missing information, output, a fictional example, quality checks, and completion. Use optional references only where needed. Avoid generic filler, empty placeholders, and duplicated manuals.
 
-Skills should be useful with user-supplied context where possible. Explain when connected access is required. Never claim that a draft was sent or that a pending approval completed an action.
+Skills are individually installable. References to another skill are optional handoffs, not relative file dependencies. The coordinator must handle an absent specialist skill.
 
-Keep evaluation criteria related to the job, distinguish evidence from inference, and leave hiring decisions with the authorized recruiter.
+Methods should work with user-supplied context when possible. Connected actions must use tools actually present in the current connection. Never infer that an email was sent, a calendar event booked, a record saved, or an approval executed from a draft or pending response.
+
+Keep criteria tied to the work, distinguish facts from inference, and preserve human hiring decisions. Honor user authorization already given while enforcing real service approval boundaries. Do not add indiscriminate permission prompts to reads or drafting.
+
+Update `catalog.json`, README, and CHANGELOG with the skill. Add a behavioral evaluation case when a new failure mode needs coverage. Run the documented checks and submit a scoped PR.
