@@ -17,3 +17,7 @@ For installation acceptance, create an isolated working directory and install fr
 CI validates format and discovery. The [behavioral cases](evals/cases.md) assess output quality separately. Release notes should distinguish automated checks, reviewer evaluation, and live product acceptance.
 
 MIT applies to original catalog content. Brand assets identify Vitae and do not grant rights to imply affiliation or endorsement.
+
+The Claude, Cursor, and Codex plugin manifests list the same skill directories as `catalog.json`. Update all three lists when adding or removing a workflow, and align their release versions and the Claude marketplace version with the catalog. Keep the plugin free of connector, hook, and app configuration; authenticated Vitae access belongs in the separate agent package.
+
+Build the OpenAI upload artifact with `python3 scripts/package.py`. The ZIP is written to `build/vitae-recruiting-skills-<version>.zip` and contains the native Codex manifest, public assets, documentation, license, and tracked skill files. It excludes repository tooling and local files. A built ZIP still needs developer verification, automated platform scans, review, and publication.

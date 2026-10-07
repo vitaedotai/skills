@@ -30,5 +30,26 @@ class ValidationTests(unittest.TestCase):
         path.write_text(path.read_text().replace('version: "0.1.0"','version: 12'))
         self.assertTrue(any('strings' in error for error in validate(self.root)))
 
+    def test_plugin_cannot_omit_catalog_skill(self):
+        path=self.root/'.cursor-plugin/plugin.json'
+        manifest=json.loads(path.read_text())
+        manifest['skills'].pop()
+        path.write_text(json.dumps(manifest))
+        self.assertTrue(any('plugin skills' in error for error in validate(self.root)))
+
+    def test_recruiting_plugin_cannot_add_connector(self):
+        path=self.root/'.codex-plugin/plugin.json'
+        manifest=json.loads(path.read_text())
+        manifest['mcpServers']='./.mcp.json'
+        path.write_text(json.dumps(manifest))
+        self.assertTrue(any('skills only' in error for error in validate(self.root)))
+
+    def test_marketplace_cannot_require_authentication(self):
+        path=self.root/'.agents/plugins/marketplace.json'
+        manifest=json.loads(path.read_text())
+        manifest['plugins'][0]['policy']['authentication']='ON_INSTALL'
+        path.write_text(json.dumps(manifest))
+        self.assertTrue(any('policy drift' in error for error in validate(self.root)))
+
 if __name__=="__main__":
     unittest.main()

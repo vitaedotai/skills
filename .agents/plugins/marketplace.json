@@ -1,0 +1,19 @@
+{
+  "name": "vitae-recruiting-skills",
+  "interface": {
+    "displayName": "Vitae Recruiting Skills"
+  },
+  "plugins": [
+    {
+      "name": "vitae-recruiting-skills",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

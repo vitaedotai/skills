@@ -20,6 +20,31 @@ bunx skills add vitaedotai/skills --list
 
 The CLI installs from this GitHub repository. [skills.sh](https://skills.sh) provides discovery; a repository does not need an npm package to supply skills. Installations do not configure a Vitae connector or authenticate an account. Use [vitaedotai/agent](https://github.com/vitaedotai/agent) for that.
 
+## Install the recruiting skills plugin
+
+The **Vitae Recruiting Skills** plugin bundles all nine workflows. It contains instructions only; use the separate [Vitae connector plugin](https://github.com/vitaedotai/agent) for authenticated access to Vitae records.
+
+### Claude Code
+
+```text
+/plugin marketplace add vitaedotai/skills
+/plugin install vitae-recruiting-skills@vitae-recruiting-skills
+```
+
+### Codex
+
+```bash
+codex plugin marketplace add vitaedotai/skills
+```
+
+Refresh plugin sources and install **Vitae Recruiting Skills** in a supported client. Adding the source alone does not install the plugin.
+
+### Cursor and public directories
+
+This repository includes a native Cursor manifest. Public Cursor, Claude, and OpenAI listings remain pending until their directories approve and publish the package. The manifests do not establish marketplace availability or client acceptance.
+
+For an OpenAI upload ZIP, run `python3 scripts/package.py`. The package includes the Codex manifest and the existing skill folders without copying or relocating their source. See [contribution checks](CONTRIBUTING.md) for verification.
+
 ## Catalog
 
 | Skill | Use it to |

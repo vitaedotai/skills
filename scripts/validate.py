@@ -6,6 +6,40 @@ import sys
 from skill_format import validate_skill, validate_links
 
 ROOT=Path(__file__).resolve().parents[1]
+PLUGIN_MANIFESTS=['.claude-plugin/plugin.json','.cursor-plugin/plugin.json',
+                  '.codex-plugin/plugin.json']
+
+def validate_plugins(root,catalog):
+    errors=[]
+    paths=[f"./{entry['name']}" for entry in catalog['skills']]
+    identity='vitae-recruiting-skills'
+    for name in PLUGIN_MANIFESTS:
+        manifest=json.loads((root/name).read_text())
+        if manifest.get('name')!=identity or manifest.get('version')!=catalog['version']:
+            errors.append(f'{name}: plugin identity or version drift')
+        if manifest.get('skills')!=paths:
+            errors.append(f'{name}: plugin skills do not match catalog')
+        if any(key in manifest for key in ('mcpServers','apps','hooks')):
+            errors.append(f'{name}: recruiting plugin must contain skills only')
+    claude=json.loads((root/'.claude-plugin/marketplace.json').read_text())
+    entries=claude['plugins']
+    if (claude.get('name')!=identity or claude['metadata'].get('version')!=catalog['version']
+        or len(entries)!=1 or entries[0].get('name')!=identity
+        or entries[0].get('source')!='./' or entries[0].get('version')!=catalog['version']):
+        errors.append('Claude marketplace identity, source, or version drift')
+    codex=json.loads((root/'.agents/plugins/marketplace.json').read_text())
+    entries=codex['plugins']
+    if (codex.get('name')!=identity or len(entries)!=1 or entries[0].get('name')!=identity
+        or entries[0].get('source')!={'source':'local','path':'./'}
+        or entries[0].get('policy')!={'installation':'AVAILABLE'}):
+        errors.append('Codex marketplace source or policy drift')
+    interface=json.loads((root/'.codex-plugin/plugin.json').read_text())['interface']
+    for key in ('logo','composerIcon'):
+        path=interface[key]
+        target=(root/path).resolve()
+        if not path.startswith('./') or not target.is_relative_to(root.resolve()) or not target.is_file():
+            errors.append(f'Codex {key}: invalid asset path')
+    return errors
 
 def validate(root=ROOT):
     errors=[]
@@ -34,6 +68,7 @@ def validate(root=ROOT):
                     target=(path.parent/link.split('#')[0]).resolve()
                     if not target.is_relative_to(path.parent.resolve()):
                         errors.append(f'{path}: runtime reference escapes individual skill')
+        errors.extend(validate_plugins(root,catalog))
         errors.extend(validate_links(root))
     except (OSError,ValueError,KeyError,TypeError) as exc:
         errors.append(f'invalid catalog: {exc}')
