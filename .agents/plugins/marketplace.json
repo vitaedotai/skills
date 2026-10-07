@@ -1,7 +1,7 @@
 {
   "name": "vitae-recruiting-skills",
   "interface": {
-    "displayName": "Vitae Recruiting Skills"
+    "displayName": "Vitae Recruiter"
   },
   "plugins": [
     {

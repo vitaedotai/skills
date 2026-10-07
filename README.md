@@ -22,7 +22,7 @@ The CLI installs from this GitHub repository. [skills.sh](https://skills.sh) pro
 
 ## Install the recruiting skills plugin
 
-The **Vitae Recruiting Skills** plugin bundles all nine workflows. It contains instructions only; use the separate [Vitae connector plugin](https://github.com/vitaedotai/agent) for authenticated access to Vitae records.
+The **Vitae Recruiter** plugin bundles all nine workflows. It contains instructions only; use the separate [Vitae connector plugin](https://github.com/vitaedotai/agent) for authenticated access to Vitae records.
 
 ### Claude Code
 
@@ -37,7 +37,7 @@ The **Vitae Recruiting Skills** plugin bundles all nine workflows. It contains i
 codex plugin marketplace add vitaedotai/skills
 ```
 
-Refresh plugin sources and install **Vitae Recruiting Skills** in a supported client. Adding the source alone does not install the plugin.
+Refresh plugin sources and install **Vitae Recruiter** in a supported client. Adding the source alone does not install the plugin.
 
 ### Cursor and public directories
 

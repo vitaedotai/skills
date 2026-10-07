@@ -28,7 +28,7 @@
     "./recruitment-workflow"
   ],
   "interface": {
-    "displayName": "Vitae Recruiting Skills",
+    "displayName": "Vitae Recruiter",
     "shortDescription": "Recruiting workflows",
     "longDescription": "Prepare job briefs, hiring scorecards, sourcing plans, evidence-based screening notes, outreach drafts, interview invitations and kits, and candidate presentations. Nine workflows support recruiter review using supplied context. They do not make automatic hiring decisions, send messages, book interviews, or configure a Vitae connection. Install the separate Vitae connector plugin to work with authorized Vitae records.",
     "developerName": "Vitae.ai",

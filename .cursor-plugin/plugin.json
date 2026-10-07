@@ -26,6 +26,6 @@
     "./candidate-presentation",
     "./recruitment-workflow"
   ],
-  "displayName": "Vitae Recruiting Skills",
+  "displayName": "Vitae Recruiter",
   "logo": "assets/logo.png"
 }
