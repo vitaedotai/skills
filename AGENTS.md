@@ -7,3 +7,5 @@ Each skill must be individually installable through the Skills CLI. Keep referen
 Use fictional examples and verified tool names. Do not publish customer data, credentials, private policies, or copied third-party content without its license. A model-generated assessment is not a hiring decision.
 
 Validate with `python3 scripts/validate.py`, the regression suite, and Skills CLI discovery on an authorized host. Keep catalog paths and versions aligned. Use scoped PRs and independent review; never call an unrun behavioral evaluation a pass.
+
+The separate `vitae-recruiting-skills` plugin references the canonical top-level skill folders through native Claude, Cursor, and Codex manifests. Keep each manifest's skills and version aligned with `catalog.json`. Do not add MCP configuration to this skills-only package. Build its upload ZIP with `python3 scripts/package.py`; marketplace manifests do not prove approval or client acceptance.

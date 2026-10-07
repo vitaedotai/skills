@@ -1,0 +1,35 @@
+{
+  "name": "vitae-recruiting-skills",
+  "version": "0.1.0",
+  "description": "Nine recruiting workflows for intake, sourcing, screening, outreach, interviews, and candidate presentations.",
+  "author": {
+    "name": "Vitae.ai",
+    "url": "https://vitae.ai"
+  },
+  "homepage": "https://vitae.ai",
+  "repository": "https://github.com/vitaedotai/skills",
+  "displayName": "Vitae Recruiter",
+  "privacyPolicyUrl": "https://vitae.ai/privacy",
+  "supportUrl": "https://github.com/vitaedotai/skills/issues",
+  "documentationUrl": "https://github.com/vitaedotai/skills#readme",
+  "termsOfServiceUrl": "https://vitae.ai/terms",
+  "license": "MIT",
+  "keywords": [
+    "vitae",
+    "recruiting",
+    "skills",
+    "sourcing",
+    "interviews"
+  ],
+  "skills": [
+    "./job-intake",
+    "./hiring-scorecard",
+    "./sourcing-strategy",
+    "./candidate-screening",
+    "./candidate-outreach",
+    "./interview-invitation",
+    "./interview-kit",
+    "./candidate-presentation",
+    "./recruitment-workflow"
+  ]
+}

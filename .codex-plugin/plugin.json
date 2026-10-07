@@ -1,0 +1,53 @@
+{
+  "name": "vitae-recruiting-skills",
+  "version": "0.1.0",
+  "description": "Nine recruiting workflows for intake, sourcing, screening, outreach, interviews, and candidate presentations.",
+  "author": {
+    "name": "Vitae.ai",
+    "url": "https://vitae.ai"
+  },
+  "homepage": "https://vitae.ai",
+  "repository": "https://github.com/vitaedotai/skills",
+  "license": "MIT",
+  "keywords": [
+    "vitae",
+    "recruiting",
+    "skills",
+    "sourcing",
+    "interviews"
+  ],
+  "skills": [
+    "./job-intake",
+    "./hiring-scorecard",
+    "./sourcing-strategy",
+    "./candidate-screening",
+    "./candidate-outreach",
+    "./interview-invitation",
+    "./interview-kit",
+    "./candidate-presentation",
+    "./recruitment-workflow"
+  ],
+  "interface": {
+    "displayName": "Vitae Recruiter",
+    "shortDescription": "Recruiting workflows",
+    "longDescription": "Prepare job briefs, hiring scorecards, sourcing plans, evidence-based screening notes, outreach drafts, interview invitations and kits, and candidate presentations. Nine workflows support recruiter review using supplied context. They do not make automatic hiring decisions, send messages, book interviews, or configure a Vitae connection. Install the separate Vitae connector plugin to work with authorized Vitae records.",
+    "developerName": "Vitae.ai",
+    "category": "Productivity",
+    "capabilities": [
+      "Draft recruiting documents",
+      "Plan sourcing and interviews",
+      "Summarize candidate evidence"
+    ],
+    "websiteURL": "https://vitae.ai",
+    "supportURL": "https://github.com/vitaedotai/skills/issues",
+    "privacyPolicyURL": "https://vitae.ai/privacy",
+    "termsOfServiceURL": "https://vitae.ai/terms",
+    "defaultPrompt": [
+      "Turn this role brief into a hiring scorecard.",
+      "Draft candidate outreach using only these facts.",
+      "Prepare a structured interview kit for this role."
+    ],
+    "logo": "./assets/logo.png",
+    "composerIcon": "./assets/logo.png"
+  }
+}
