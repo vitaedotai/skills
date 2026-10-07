@@ -42,7 +42,7 @@ Use the actual supplied scheduling link in the final message. This example does 
 
 ## With Vitae
 
-Read the candidate and job with available tools. The current public connector does not provide calendar booking or direct email sending. Return the invitation for the recruiter to send and book in Vitae's Calendar or Messages surface. Never invent a meeting URL or claim an event exists.
+Read the candidate and job with available tools. Inspect the live catalog for booking and email tools. Use them only for the specific action authorized by the user, with confirmed logistics and Vitae's approval requirements. If the action is unavailable, return the invitation and a precise handoff for the recruiter to send or book in Vitae. Never invent a meeting URL or claim an event exists.
 
 ## Completion and handoff
 

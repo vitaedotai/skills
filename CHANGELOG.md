@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+Moved active distribution and future maintenance to the unified Vitae plugin in vitaedotai/agent. Retained the original nine-skill snapshot for reference. Corrected invitation guidance to inspect live send and booking tools rather than claiming they are absent.
+
 ## 0.1.0
 
 First installable release. See README for available capabilities and validation boundaries.

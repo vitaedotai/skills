@@ -1,23 +1,14 @@
-# Contributing
+# Contributions moved
 
-See [the authoring guide](docs/authoring.md). Add a top-level directory with a real `SKILL.md`, update `catalog.json` and README, and include a fictional example.
+Submit new workflows, fixes and release changes to [vitaedotai/agent](https://github.com/vitaedotai/agent). Follow its [authoring guide](https://github.com/vitaedotai/agent/blob/main/docs/recruiter-authoring.md) and [verification instructions](https://github.com/vitaedotai/agent/blob/main/CONTRIBUTING.md).
 
-On an authorized verification host:
+The retained 0.1.0 snapshot can be checked on the authorized verification host with:
 
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r scripts/requirements.txt
 .venv/bin/python scripts/validate.py
 .venv/bin/python -m unittest discover -s scripts -p 'test_*.py'
-DISABLE_TELEMETRY=1 bunx skills add . --list
 ```
 
-For installation acceptance, create an isolated working directory and install from an absolute path to this checkout with `--skill candidate-outreach --agent codex --agent claude-code --yes`. Confirm the installed files and their references exist. Do not install test packages globally into a recruiter's real environment.
-
-CI validates format and discovery. The [behavioral cases](evals/cases.md) assess output quality separately. Release notes should distinguish automated checks, reviewer evaluation, and live product acceptance.
-
-MIT applies to original catalog content. Brand assets identify Vitae and do not grant rights to imply affiliation or endorsement.
-
-The Claude, Cursor, and Codex plugin manifests list the same skill directories as `catalog.json`. Update all three lists when adding or removing a workflow, and align their release versions and the Claude marketplace version with the catalog. Keep the plugin free of connector, hook, and app configuration; authenticated Vitae access belongs in the separate agent package.
-
-Build the OpenAI upload artifact with `python3 scripts/package.py`. The ZIP is written to `build/vitae-recruiting-skills-<version>.zip` and contains the native Codex manifest, public assets, documentation, license, and tracked skill files. It excludes repository tooling and local files. A built ZIP still needs developer verification, automated platform scans, review, and publication.
+Do not create a second active plugin release here. The current portable upload ZIP is built in the unified agent repository.
