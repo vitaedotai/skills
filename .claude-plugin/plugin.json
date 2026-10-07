@@ -8,6 +8,11 @@
   },
   "homepage": "https://vitae.ai",
   "repository": "https://github.com/vitaedotai/skills",
+  "displayName": "Vitae Recruiting Skills",
+  "privacyPolicyUrl": "https://vitae.ai/privacy",
+  "supportUrl": "https://github.com/vitaedotai/skills/issues",
+  "documentationUrl": "https://github.com/vitaedotai/skills#readme",
+  "termsOfServiceUrl": "https://vitae.ai/terms",
   "license": "MIT",
   "keywords": [
     "vitae",

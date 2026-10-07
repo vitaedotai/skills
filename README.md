@@ -71,6 +71,12 @@ The recruiting methods work from supplied documents without an account. Connecte
 
 Candidate assessments support recruiter review. They do not make automatic hiring decisions. Examples are fictional. Keep real candidate and client data out of this repository.
 
+## Privacy and support
+
+This plugin contains readable recruiting instructions and static assets. It has no MCP server, service credentials, telemetry, or storage service of its own. The assistant processes the context you authorize under its provider's terms and privacy policy. The instructions can use personal recruiting information, so supply only the context needed for the task.
+
+Connecting the separate Vitae connector gives the assistant access to records in the workspace you authorize. Those actions and any records saved through that connector are governed by the workspace's permissions, approvals, and applicable privacy notices. See [Vitae's privacy notice](https://vitae.ai/privacy) and [terms](https://vitae.ai/terms). Report plugin issues through [GitHub support](https://github.com/vitaedotai/skills/issues), using fictional examples rather than candidate data or credentials.
+
 ## Quality and contributions
 
 Follow [the authoring guide](docs/authoring.md) and [contribution checks](CONTRIBUTING.md). CI validates portable metadata, catalog consistency, local references, and Skills CLI discovery. Behavioral evaluation cases are in [evals/cases.md](evals/cases.md).
