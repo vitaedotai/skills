@@ -1,3 +1,5 @@
+> Current authoring and releases live in [vitaedotai/agent](https://github.com/vitaedotai/agent/blob/main/docs/recruiter-authoring.md). The guidance below documents this repository's retained snapshot.
+
 # Authoring recruiter skills
 
 Each top-level skill directory contains a portable `SKILL.md` with YAML frontmatter: `name`, a discriminating `description`, `license`, and string-valued `metadata.version`. The directory and name must match. Keep additional resources inside that directory so individual installation remains self-contained.

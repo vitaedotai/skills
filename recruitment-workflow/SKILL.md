@@ -25,7 +25,7 @@ Identify the role, client, workspace if connected, hiring owner, existing progre
 | Interviewers need a plan | `interview-kit` | Timed questions and assessment guidance |
 | Client needs a candidate summary | `candidate-presentation` | Evidence and approved sharing scope |
 
-Load only the relevant installed skill. Skills may be installed individually; never assume a sibling directory is present. If a needed skill is missing, explain its purpose and use `bunx skills add vitaedotai/skills --skill <name>` only when installation is within the user's request. Otherwise give a concise manual handoff. Do not claim that delegation or installation happened when it did not.
+Load only the relevant installed skill. Skills may be installed individually; never assume a sibling directory is present. If a needed skill is missing, explain its purpose and use `bunx skills add vitaedotai/agent --skill <name>` only when installation is within the user's request. Otherwise give a concise manual handoff. Do not claim that delegation or installation happened when it did not.
 
 ## Maintain state
 
